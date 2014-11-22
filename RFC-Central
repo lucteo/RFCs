@@ -1,0 +1,8 @@
+roles: server, client
+
+server binds DEALER socket to 5556
+client connects DEALER to port 5556
+
+client sends "hello"
+server responds with secret first time
+server responds with "TOOLATE" after that
