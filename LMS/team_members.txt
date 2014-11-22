@@ -1,3 +1,0 @@
-Lucian Radu Teodorescu - C
-Mihai Greavu - C
-Sabin Mihaila - Python
