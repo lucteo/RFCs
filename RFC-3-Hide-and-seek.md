@@ -11,13 +11,16 @@ To make sure, clients know which servers they found,
 servers are obliged to send the client a unique identifier when they are found.
 
 
-Specifications
---------------
+Server specifications
+---------------------
 
 - A server SHOULD accept a tcp-connection on port 5559.
 - A server SHOULD accept only one client connection.
 - A server SHOULD quit when the client sends any message.
 - A server SHOULD send its identifier to the client before quiting.
+
+Client Specification
+--------------------
 
 - A client SHOULD connect to a tcp-connection on port 5559.
 - A client MAY accept a replay with the identifier of the client.
