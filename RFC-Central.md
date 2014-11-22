@@ -5,11 +5,13 @@ roles: server, client
 port: must be in range 5500-5600
 
 server listens on *:<port>, socket type DEALER
-server sends "<name>"       // the <name> is the name of the server
+
+server responds w/ "<secret>" to first request      // the <secret> is a fun catch phrase
     // this is a blocking call for the server; it waits until is discovered
+server responds w/ "Too late, secret was <secret> but it's taken" to any subsequent request
+    // Secret value should be secret :)
 
 
 client connects DEALER to <ip>:<port>
-client reads "<name>"
-    // client prints the name of the found server
-    // at this point the server will terminate - it has been found
+client reads "<secret>"
+    // client collects the name of the found server
